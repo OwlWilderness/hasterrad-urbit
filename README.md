@@ -1,48 +1,92 @@
-# HASTERRAD — native Urbit port (in progress)
+# HASTERRAD — native Urbit game
 
-This repository preserves an unfinished native-port scaffold. It is **not a
-release, installable handoff, or runtime-accepted game**. The current Hoon-owned
-rewrite is being developed separately and has not been integrated into this
-checkout. Do not treat the preserved JavaScript-authoritative game as that rewrite.
+An asteroid shooter with Urbit sigils. **Hoon owns the game; JavaScript renders it and transports controls.** Version **0.0.1** is the initial experimental source release; see [VERSION](VERSION) and [CHANGELOG.md](CHANGELOG.md). It includes the accepted gentle-levels, Info, one-button UI and licensed 29-file frontend. Runtime and frontend bytes are unchanged from accepted build `0f6e80fc5ab52ab0cf31e3be5b91ba2fc7786aeb`. Player-speed/turn tuning is deferred to #13, not included. Source publication is separate from live Urbit activation.
 
-## Current architecture boundary
+## Architecture and accepted baseline
 
-The intended native game puts simulation, rules, collisions, scoring and lives in
-Hoon; the browser is a thin renderer/input client. Player identity comes from the
-host ship's ordinary authenticated Urbit session, with lives based on the ship's
-syllables. There is no game-level login: no EAuth, RemiliaNET or external account
-backend. Eyre access security must remain intact.
+- `desk/app/hasterrad.hoon`: Gall agent, existing Eyre session, input sequencing, watches, persisted world and safe control release. The installing ship is the pilot; the publisher is not the player identity. No EAuth, separate login, external HTTP backend or SQLite service is required.
+- `desk/lib/hasterrad-core.hoon` and `hasterrad-enemies.hoon`: movement, precise shot/thrust vectors, swept collisions, random valid four-syllable targets, 4 → 2 → 1 fragmentation, armed large/small zods, scoring and host-syllable lives. Rounds end on lost lives, not a 60-second gameplay cap.
+- `frontend/public/`: complete prebuilt frontend, official sigil artwork generation, touch controls and bounded presentation interpolation. Art tiles remain inside the directional player triangle and disappear with lives; moon hosts retain their full identity. Presentation never creates authoritative hits, bullets or score.
+- `desk/mar/`, `sur/` and support libraries: native metadata/mark closure, including `mar/ship.hoon`. `desk.docket-0` includes a self-contained discovery icon.
 
-The current target-generation design uses valid four-syllable Urbit names,
-authentic generated sigils and four-to-two-to-one syllable fragmentation.
-Ingredient source identities are provenance, not claims that generated targets
-are installed or owned. These are rewrite requirements, not verified behavior of
-this checkout.
+### Controls
 
-## What is actually here
+Arrow Left/Right or **A/D** rotate; Arrow Up or **W** thrust; **Space** fires. Touch buttons provide the same controls. One shared button shows **Start game** when ready and **Play again** at game over, and is hidden while playing, including intermission. Full screen and accessible **Info** are available. Info links to the exact source repository and supports Close/Escape with focus return.
 
-- `desk/` contains the earlier Gall agent, molds, marks, docket support and
-  generated frontend assets. It was designed around ship-local run records while
-  JavaScript still owned gameplay, not the new Hoon simulation.
-- `frontend/` contains that earlier browser game and native-score adapter.
-- `tools/` and `bootstrap/` contain experimental local build/upload/install probes;
-  they are not a closed or verified installation workflow.
+The committed native source permits **at most four simultaneous player projectiles**, not four shots per second. Each distinct press requests one shot; holding or OS key repeat does not autofire. Short taps survive input coalescing, Hoon retains its cooldown, and presses made at capacity are discarded rather than banked. Enemy projectiles are separate. Saved-world loading trims only excess player shots and safety-clears controls, retaining the rest of the world.
 
-The paused scaffold reached compile/start on a disposable fake ship, but its HTTP
-routes still returned 500. Successful score save/read, owner/foreign mutation
-refusal, bounded score validation and state-reload persistence were not accepted.
-A transport or compiler success does not establish game acceptance. The isolated
-rewrite's compile, renderer and integration outcomes remain unsettled here.
+**Levels:** Hoon starts Level 1 with two slow rocks/no enemies and Level 2 with three/no enemies. Level 3 allows one large slow zod after about 15 seconds active play; no small enemy before Level 5. Clear all asteroids/fragments to advance through a safe intermission, retaining score/lives. Difficulty grows gradually with caps; the HUD shows level. Saved state migrates from `%4` to `%5`.
 
-## Usage and continuation limits
+**Delivery boundary:** native levels/migration and four-shot behavior have accepted disposable-ship qualification; the one-button UI has accepted isolated-browser fixture-state qualification, not an independently replayed real loss. Parent accepted the frozen combined source; this checkout does not repeat those native campaigns. Three changed Hoon sources and the combined frontend must still pass owner-controlled publisher commit/glob and consumer readbacks. Nothing here proves live activation.
 
-There is no supported play/install command for this checkout yet. Do not paste the
-retained bootstrap commands into a real ship, restart a ship, or install these
-artifacts based on this README. Coordinate with the rewrite owner before editing
-source or using any disposable runtime. Integration must first establish the exact
-Hoon/frontend contract, compile and gameplay behavior, persistence/access checks,
-and a reviewed installation bundle with explicit target authorization.
+One active game tab per installing ship is supported. Closing another game tab may pause this session (#8); this does not pause other subscriber ships. The permanent gold playfield border and warning are included. There is no explicit Quit button: leave using browser Back/close, and exit fullscreen first if necessary (#10).
 
-The maintained standalone web game and website remain separate products in
-`hasterrad` and `quantumtekh-com`. This README-only change neither integrates the
-rewrite nor changes those products, any live ship, package, DNS, tunnel or service.
+## Install the published desk
+
+From your own ship's Dojo, the distribution source is the publisher moon, **~sitnup-ronsym-dirted-pallup**, and the desk is **%hasterrad**:
+
+```hoon
+|install ~sitnup-ronsym-dirted-pallup %hasterrad
+```
+
+Wait for native installation to complete, then open HASTERRAD from Landscape under your existing ship session. `~dirted-pallup` is the known consumer, not the publisher. A UI may abbreviate the moon's identity; use the full publisher above. Do not run a second copy of a real ship identity, uninstall an existing game merely to refresh assets, or bypass Eyre authentication.
+
+This installs whatever the publisher has actually released, **not automatically this Git branch**. Historical consumer installation and complete frontend readbacks were accepted; fresh availability and this candidate's native activation are not asserted here.
+
+### Source installation and frontend releases
+
+The source targets **Kelvin 408**. Start with a compatible native base and qualify a fresh disposable desk before real installation. `desk/` supplies app-specific files and metadata; it is not a ship/pier/bootstrap bundle. Runtime and base libraries come from the compatible Urbit installation.
+
+`desk/desk.docket-0` is deliberately a **fresh-install template**: its glob reference is `0v0`. The inherited production descriptor contained an older nonzero glob and was unsafe to publish as current. Public publisher identity and embedded artwork are retained, but **this descriptor is not a live release reference**.
+
+For an existing publisher, preserve its actual native Docket source/glob and icon. Apply only reviewed changed source paths, then use the publisher's normal native Clay commit workflow. Never copy this template or an old full desk over a newer live descriptor. A source Git commit, a native Clay commit and a frontend Docket glob are different operations. The current combined successor changes `app/hasterrad.hoon`, `lib/hasterrad-core.hoon` and `lib/hasterrad-enemies.hoon`; release these three native paths before the combined frontend, preserving live metadata.
+
+For a frontend release, open the publisher's native glob-upload UI, explicitly select **hasterrad**, and select the entire `frontend/public/` directory (29 files in this licensed build, including complete notices). Do not select the repository root or another desk. Publish a fresh glob only after native source acceptance when both contracts change; border/copy-only changes need a glob, not a Hoon commit. The four-shot fix itself changes only the two Hoon files, so needs no new frontend glob. Verify consumer metadata and exact assets after publication; never replay a stale glob identifier.
+
+Ordinary CDN requests have previously returned old CSS while a unique-query request matched the new origin. Browser `no-store` is not sufficient evidence of a fresh edge response. Seven first-party modules/CSS now use content fingerprints (#7), including transitive imports. Ordinary root HTML freshness and consumer asset readback still require post-publication verification; content hashes do not by themselves make a cached root index fresh. Do not repeatedly re-upload to diagnose caching.
+
+## Clean-checkout checks
+
+Prerequisites: Python 3.10+ and Node.js with the built-in test runner (Node 18+). There is no npm install; dependencies and notices are bundled. Editable inputs are in `frontend/source/`. The portable Python build regenerates `frontend/public/`, fingerprints imports, validates all 29 files and writes a verified ZIP to ignored `.build/`.
+
+Run from the repository root:
+
+```sh
+python3 tools/build.py
+python3 -m unittest discover -s tests -p 'test_*.py' -v
+node --test tests/frontend.test.mjs tests/one-button.test.mjs
+python3 tools/export_native_test.py gentle > "$TMPDIR/hasterrad-gentle.hoon"
+```
+
+Set `TMPDIR` to a writable scratch directory if your shell does not provide one. The Python suite checks source hashes, metadata syntax/mark presence, local dependency closure and native-authority contract sentinels. The Node suites exercise quick-tap edges, held heartbeats, safe release/sequences, moon artwork, bounded interpolation, native transport routing and the composed one-button/Info lifecycle. **Neither suite compiles Hoon or proves live deployment.**
+
+`tests/native/` retains six native level/wave/opening/gentle-enemy/migration/no-carry fragments. The earlier four-shot `%4` fixtures remain in baseline commit history, not falsely offered against the new world mold. `tools/export_native_test.py CASE` assembles one against this checkout's actual source as a `%fyrd` strand body, without connecting to any ship. Native execution requires a separately owned compatible disposable ship and the normal native evaluation transport; that runtime is intentionally not bundled. Never execute these fixtures against an owner's real game. The portable descriptor check is textual, not a fresh native Docket-parser admission; clean native packaging remains a release gate (#2).
+
+`source-manifest.json` seals the imported baseline, native fixtures and deliberate `0v0` template. Updating source requires updating that manifest deliberately after review. Historical private runtime receipts, pier state and operational scripts are not clean-checkout dependencies.
+
+## Work tracked separately
+
+| Issue | Scope / status |
+| --- | --- |
+| #1 | Historical native installation/score tracking; not automatically closed by this source snapshot |
+| #2 | Accepted native source, portable packaging and release qualification |
+| #3 | Four-shot press-only source and owner-controlled activation |
+| #4 | Border/warning source and frontend delivery |
+| #5 | Gentle Hoon-owned levels: accepted native source included; publisher activation and consumer delivery pending |
+| #6 | Proposed local stats API and opt-in native Ames moon leaderboard; bounded/idempotent/offline-safe, sender authenticated, community trust rather than anti-cheat |
+| #7 | Seven fingerprinted first-party assets and portable build included; ordinary root/consumer delivery verification pending |
+| #8 | Same-ship multi-tab lifecycle hardening: pending |
+| #9 | Accessible Info/source link and single Start game / Play again button included; accepted UI evidence, not live-delivery proof |
+| #10 | Explicit Quit/return-to-Landscape: potential follow-up, not implemented |
+| #11 | Distributor moon package source: destination decision pending, not imported here |
+| #12 | Owner-selected first-party MIT policy, nine preserved component notices, native Urbit support notice and frontend license index included; exact per-file source/embedded-package matches documented; historical import/build events and owner rights/branding review remain open |
+
+Source home: https://github.com/OwlWilderness/hasterrad-urbit . Version 0.0.1 is prepared for publication under the repository's existing visibility; no change to public visibility is implied. The standalone browser game and website remain separate products. See [CONTRIBUTING.md](CONTRIBUTING.md) for issue-linked commits and ownership boundaries.
+
+## Notices
+
+The owner selected **MIT for project-specific code and documentation**; see [LICENSE](LICENSE). The collective attribution “2026 HASTERRAD contributors” describes project contributions, not a proven rights chain or invented legal entity. It grants only rights contributors can grant and does not relicense third-party components or clear legacy artwork. See [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md) for the component/version/scope table and remaining provenance limits, and `license-manifest.json` for notice hashes.
+
+All nine existing MIT notices are preserved byte-for-byte. The complete Urbit MIT notice now covers supplied native support libraries/molds/marks in `licenses/urbit-native.txt`; 12 native files have exact pinned upstream matches and the Docket mark differs only by two removed trailing spaces. The hoon mark matches a different revision; no coherent original base or historical import is claimed. Embedded browser-or-node 1.3.0 and fetch-event-source 2.0.1 match official npm source bytes, not merely dependency ranges; the original installation/build event remains unknown. Per-file revisions, URLs, hashes and component versions are in `license-manifest.json`. The frontend includes the full project license, component notices and native notice, with an accessible **Info → Licenses and notices** index. Keep these with every distribution; build checks canonical notice parity and ZIP contents.
+
+Owner confirmation of contributor/predecessor rights, external code/art inputs and icon provenance, plus branding/name review, remains required before public release (#12). Excluded legacy SAN Sound/HARDWIRE product-reference artwork is not licensed or cleared by this change. No legal clearance, clean-room or noninfringement claim is made. MIT selection resolves the license-policy decision, not those external rights questions. See [NOTICE.md](NOTICE.md).

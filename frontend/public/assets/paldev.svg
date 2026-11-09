@@ -1,0 +1,13 @@
+<svg
+      style="display: block;"
+      width="256"
+      height="256"
+      viewBox="0 0 256 256"
+      version="1.1"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <rect fill="#f3f2eb" width="256" height="256" x="0" y="0" />
+      <g transform="translate(32,80) scale(0.75)">
+        <g transform='scale(1) translate(0,0) '><path d='M0.0541 0C70.7217 0.0292317 128 57.3256 128 128C57.3177 128 0.0164917 70.7089 7.62806e-06 0.0305091C7.62851e-06 0.0203397 -4.44317e-10 0.01017 0 0H0.0541Z' fill='#243c31' stroke='#f3f2eb' stroke-width='4'/><path d='M128 0L0 128' stroke='#f3f2eb' stroke-linecap='square' fill='none' stroke-width='4'/><path d='M128 96C101.492 96 77.4939 85.2564 60.1217 67.8862' stroke='#f3f2eb' fill='none' stroke-width='4'/><path d='M128 64C110.328 64 94.3287 56.8374 82.7471 45.2568' stroke='#f3f2eb' fill='none' stroke-width='4'/><path d='M128 32.3716C119.164 32.3716 111.164 28.7903 105.374 23' stroke='#f3f2eb' fill='none' stroke-width='4'/></g><g transform='scale(1) translate(128,0)'><path d='M64 128H0L5.59506e-06 0L64 5.59506e-06C99.3462 8.68512e-06 128 28.6538 128 64C128 99.3462 99.3462 128 64 128Z' fill='#243c31' stroke='#f3f2eb' stroke-width='4'/><line x1='96.5' y1='3.07317e-08' x2='96.5' y2='128' stroke='#f3f2eb' fill='none' stroke-width='4'/><line x1='32.5' y1='3.07317e-08' x2='32.5' y2='128' stroke='#f3f2eb' fill='none' stroke-width='4'/><circle cx='64' cy='64' r='11.5' fill='#243c31' stroke='#243c31' stroke-width='4'/><circle cx='64' cy='64' r='9' fill='#f3f2eb' stroke='#f3f2eb' stroke-width='4'/></g>
+      </g>
+    </svg>

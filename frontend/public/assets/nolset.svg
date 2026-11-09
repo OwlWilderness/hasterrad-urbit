@@ -1,0 +1,13 @@
+<svg
+      style="display: block;"
+      width="256"
+      height="256"
+      viewBox="0 0 256 256"
+      version="1.1"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <rect fill="#f3f2eb" width="256" height="256" x="0" y="0" />
+      <g transform="translate(32,80) scale(0.75)">
+        <g transform='scale(1) translate(0,0) '><circle cx='64' cy='64' r='64' fill='#243c31' stroke='#f3f2eb' stroke-width='4'/><line x1='128' y1='64' x2='1.51277e-05' y2='64' stroke='#f3f2eb' fill='none' stroke-width='4'/><circle cx='64' cy='96' r='11.5' fill='#243c31' stroke='#243c31' stroke-width='4'/><circle cx='64' cy='96' r='9' fill='#f3f2eb' stroke='#f3f2eb' stroke-width='4'/></g><g transform='scale(1) translate(128,0)'><circle cx='64' cy='64' r='64' fill='#243c31' stroke='#f3f2eb' stroke-width='4'/><path d='M64 64L128 64' stroke='#f3f2eb' fill='none' stroke-width='4'/></g>
+      </g>
+    </svg>

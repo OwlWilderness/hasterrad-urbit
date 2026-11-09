@@ -1,0 +1,13 @@
+<svg
+      style="display: block;"
+      width="256"
+      height="256"
+      viewBox="0 0 256 256"
+      version="1.1"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <rect fill="#f3f2eb" width="256" height="256" x="0" y="0" />
+      <g transform="translate(32,32) scale(0.75)">
+        <g transform='scale(1) translate(0,0) '><path d='M0 0C0 70.6925 57.3075 128 128 128V0H0Z' fill='#243c31' stroke='#f3f2eb' stroke-width='4'/><path d='M96 64C96 81.6731 81.6731 96 64 96' stroke='#f3f2eb' fill='none' stroke-width='4'/><line x1='16.0035' y1='15.9965' x2='48.0035' y2='47.9965' stroke='#f3f2eb' fill='none' stroke-width='4'/><circle cx='64' cy='64' r='16' stroke='#f3f2eb' fill='none' stroke-width='4'/></g><g transform='scale(1) translate(128,0)'><circle cx='64' cy='64' r='64' fill='#243c31' stroke='#f3f2eb' stroke-width='4'/><circle cx='32' cy='96' r='11.5' fill='#243c31' stroke='#243c31' stroke-width='4'/><circle cx='32' cy='96' r='9' fill='#f3f2eb' stroke='#f3f2eb' stroke-width='4'/></g><g transform='scale(1) translate(0,128)'><path d='M0.0541 0C70.7217 0.0292317 128 57.3256 128 128C57.3177 128 0.0164917 70.7089 7.62806e-06 0.0305091C7.62851e-06 0.0203397 -4.44317e-10 0.01017 0 0H0.0541Z' fill='#243c31' stroke='#f3f2eb' stroke-width='4'/><path d='M128 0L0 128' stroke='#f3f2eb' stroke-linecap='square' fill='none' stroke-width='4'/><path d='M128 96C101.492 96 77.4939 85.2564 60.1217 67.8862' stroke='#f3f2eb' fill='none' stroke-width='4'/><path d='M128 64C110.328 64 94.3287 56.8374 82.7471 45.2568' stroke='#f3f2eb' fill='none' stroke-width='4'/><path d='M128 32.3716C119.164 32.3716 111.164 28.7903 105.374 23' stroke='#f3f2eb' fill='none' stroke-width='4'/></g><g transform='scale(1) translate(128,128)'><path d='M64 128H0L5.59506e-06 -7.62939e-06L64 -2.03434e-06C99.3462 1.05573e-06 128 28.6538 128 64C128 99.3462 99.3462 128 64 128Z' fill='#243c31' stroke='#f3f2eb' stroke-width='4'/><path d='M64 16C90.5097 16 112 37.4903 112 64C112 90.5097 90.5097 112 64 112' stroke='#f3f2eb' fill='none' stroke-width='4'/><line x1='128' y1='64' x2='-8.87604e-09' y2='64' stroke='#f3f2eb' fill='none' stroke-width='4'/></g>
+      </g>
+    </svg>

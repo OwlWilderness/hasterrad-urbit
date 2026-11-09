@@ -1,0 +1,22 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {mountUI} from '../frontend/source/assets/app.mjs';
+import {fixtureUI} from './ui-fixture.mjs';
+test('one state-aware launch button preserves native actions, sequence and UI safety',async()=>{
+ const html=readFileSync(new URL('../frontend/source/index.html',import.meta.url),'utf8');
+ assert.equal((html.match(/id="(?:start|restart)"/g)||[]).length,1,'exactly one launch button in actual HTML');
+ const f=fixtureUI();f.fixture.status='ready';f.fixture.inputSeq=90;
+ const ui=mountUI(f.doc,f.win,f.API);await ui.connect();
+ const b=f.elements.start;assert.equal(b.textContent,'Start game');assert.equal(b.disabled,false);assert.equal(b.hidden,false);
+ b.dispatchEvent(new Event('click'));f.advance(200);await f.settle();assert.equal(f.sent.at(-1).action,'start');assert.ok(f.sent.at(-1).seq>90);assert.equal(f.doc.activeElement,f.elements.field);
+ f.instances[0].watcher({...f.fixture,status:'playing',level:1,phase:'active',transitionTicks:0});assert.equal(b.hidden,true);
+ let n=f.sent.length;b.dispatchEvent(new Event('click'));f.advance(200);await f.settle();assert.ok(f.sent.slice(n).every(p=>!['start','restart'].includes(p.action)));
+ f.instances[0].watcher({...f.fixture,status:'playing',level:1,phase:'complete',transitionTicks:15});assert.equal(b.hidden,true);assert.equal(f.elements.overlay.hidden,false);
+ f.instances[0].watcher({...f.fixture,status:'gameover',lives:0,inputSeq:140});assert.equal(b.textContent,'Play again');assert.equal(b.hidden,false);assert.equal(b.disabled,false);
+ b.dispatchEvent(new Event('click'));f.advance(200);await f.settle();assert.equal(f.sent.at(-1).action,'restart');assert.ok(f.sent.at(-1).seq>140);assert.equal(f.doc.activeElement,f.elements.field);
+ f.elements.info.focus();f.elements.info.dispatchEvent(new Event('click'));assert.equal(f.elements['info-panel'].open,true);f.elements['info-panel'].dispatchEvent(new Event('cancel',{cancelable:true}));assert.equal(f.elements['info-panel'].open,false);assert.equal(f.doc.activeElement,f.elements.info);
+ f.instances[0].onError();assert.equal(b.disabled,true);assert.equal(f.elements.reconnect.hidden,false);
+ n=f.sent.length;b.dispatchEvent(new Event('click'));f.advance(200);await f.settle();assert.equal(f.sent.length,n,'disconnected command is inert');
+ ui.dispose();
+});

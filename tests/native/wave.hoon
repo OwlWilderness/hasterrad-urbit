@@ -1,0 +1,5 @@
+=/  w  (fixture:c ~dirted-pallup)
+=.  w  w(targets ~, shield 0, score 230, lives 3)
+=/  n  (step:c w [%& %& %& %&])
+?>  =(~ targets.n)
+?>  &(=(230 score.n) =(3 lives.n) =(~ shots.n))

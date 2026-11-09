@@ -1,0 +1,13 @@
+<svg
+      style="display: block;"
+      width="256"
+      height="256"
+      viewBox="0 0 256 256"
+      version="1.1"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <rect fill="#f3f2eb" width="256" height="256" x="0" y="0" />
+      <g transform="translate(32,80) scale(0.75)">
+        <g transform='scale(1) translate(0,0) '><path d='M0 0C0 70.6925 57.3075 128 128 128V0H0Z' fill='#243c31' stroke='#f3f2eb' stroke-width='4'/><line x1='0.5' y1='-0.5' x2='181.5' y2='-0.5' transform='matrix(-0.707107 0.707107 0.707107 0.707107 128.71 0)' stroke='#f3f2eb' stroke-linecap='square' fill='none' stroke-width='4'/><circle cx='32' cy='32' r='11.5' fill='#243c31' stroke='#243c31' stroke-width='4'/><circle cx='32' cy='32' r='9' fill='#f3f2eb' stroke='#f3f2eb' stroke-width='4'/></g><g transform='scale(1) translate(128,0)'><path d='M5.59506e-06 128C70.6925 128 128 70.6925 128 0L0 5.59506e-06L5.59506e-06 128Z' fill='#243c31' stroke='#f3f2eb' stroke-width='4'/><path d='M22.1288 22.6299C16.0075 28.7511 8.0234 31.874 0.00134547 31.9986M44.7562 45.2573C32.3866 57.6269 16.2133 63.8747 0.00134277 64.0005M67.3836 67.8847C48.7656 86.5027 24.403 95.8749 0.00134412 96.0012' stroke='#f3f2eb' fill='none' stroke-width='4'/><path d='M-0.00280762 0L127.997 128' stroke='#f3f2eb' stroke-linecap='square' fill='none' stroke-width='4'/></g>
+      </g>
+    </svg>

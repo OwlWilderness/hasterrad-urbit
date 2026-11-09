@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<title>HASTERRAD</title><link rel="stylesheet" href="assets/style.c2909b918d1b.css">
+<script defer src="assets/urbit-http-api-2.3.0.min.js"></script>
+<script type="module" src="assets/app.c58d8fecb382.mjs"></script>
+</head>
+<body>
+<main id="game">
+ <header><div class="wordmark">HASTERRAD<span>SHIP / SYLLABLE / SIGNAL</span></div><div id="connection" role="status" aria-live="polite">Disconnected</div><button id="info" type="button" aria-label="Info" aria-expanded="false" aria-controls="info-panel">ⓘ Info</button><button id="fullscreen" type="button">Full screen</button></header>
+ <dialog id="info-panel" aria-labelledby="info-title"><h2 id="info-title">Info</h2><p><a href="https://github.com/OwlWilderness/hasterrad-urbit" target="_blank" rel="noopener noreferrer">Source on GitHub</a></p><p><a href="licenses/index.html" target="_blank" rel="noopener noreferrer">Licenses and notices</a></p><button id="info-close" type="button">Close</button></dialog>
+ <section class="hud" aria-label="Authoritative ship state">
+  <div class="identity"><img id="sigil" alt="" hidden src="assets/dirted-pallup.svg"><div><span class="caption">PILOT</span><strong id="ship">Awaiting ship</strong></div></div>
+  <div><span class="caption">SYLLABLES / LIVES</span><div id="lives">—</div></div>
+  <div class="score"><span class="caption">LEVEL</span><strong id="level">—</strong></div>
+  <div class="score"><span class="caption">SCORE</span><strong id="score">—</strong></div>
+ </section>
+ <section class="arena" aria-label="Hoon game playfield">
+  <canvas id="field" width="1024" height="768" tabindex="0" aria-label="Ship playfield. Arrow keys or A D rotate, W or Up thrust, Space fires."></canvas>
+  <div id="overlay"><h1 id="phase">Awaiting signal</h1><p id="message">Open from your ship’s existing session. No separate game sign-in.</p><div class="actions"><button id="start" type="button" disabled>Start game</button><button id="reconnect" type="button">Reconnect</button></div></div>
+ </section>
+ <footer><span>← → / A D ROTATE · ↑ / W THRUST · SPACE FIRE</span><span id="tick">STATE —</span></footer>
+ <p class="prototype">One active game tab per ship. Closing another game tab may pause this session. Rounds end when syllable-based lives reach zero, with no forced gameplay time limit. Hidden/disconnected controls release; network loss idles within 3 seconds.</p>
+ <nav class="touch" aria-label="Touch flight controls"><button data-control="left" aria-label="Rotate left">↶</button><button data-control="thrust" aria-label="Thrust">↑</button><button data-control="right" aria-label="Rotate right">↷</button><button data-control="fire">FIRE</button></nav>
+</main>
+<noscript>JavaScript is required to render the Hoon-owned game.</noscript>
+</body></html>

@@ -1,0 +1,459 @@
+{
+  "format": 1,
+  "policy": "MIT for project-specific contributions only; third-party terms preserved; not legal clearance",
+  "native_revision": "Per-file source matches pinned below; actual historical import event/revision unknown; no single coherent base claimed",
+  "http_embedded_versions": "browser-or-node 1.3.0 and @microsoft/fetch-event-source 2.0.1 exact embedded source matches; original installation/build event unknown",
+  "notices": [
+    {
+      "file": "bn.js.txt",
+      "sha256": "445739f5b5eb63e5aeff5aeb0f35a45080a421615dce0d97f9939aeea498acdd"
+    },
+    {
+      "file": "browser-or-node.txt",
+      "sha256": "24db40be0d44fa26998a36b48321360478c5f2b6fe80b05c620b21a2810c2351"
+    },
+    {
+      "file": "fetch-event-source.txt",
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
+    },
+    {
+      "file": "hasterrad.txt",
+      "sha256": "1001ebef00763071fb0401132adea01584bd5c396e5547f6d47128be0e60e038"
+    },
+    {
+      "file": "invariant.txt",
+      "sha256": "f657f99d3fb9647db92628e96007aabb46e5f04f33e49999075aab8e250ca7ce"
+    },
+    {
+      "file": "lodash.chunk.txt",
+      "sha256": "ffd8b33b354585f4ce119f19c53728281e48a97b074491eb6bf6d5c5ff305272"
+    },
+    {
+      "file": "lodash.isequal.txt",
+      "sha256": "e159c6d48c989185448658f276375bfb2300362ec6d4ae5525a2d49c4bcb947d"
+    },
+    {
+      "file": "urbit-http-api.txt",
+      "sha256": "b5d62c0a6f6b17ff490de29606527bf77b6509998ef07048488d659e2b719e52"
+    },
+    {
+      "file": "urbit-native.txt",
+      "sha256": "b5d62c0a6f6b17ff490de29606527bf77b6509998ef07048488d659e2b719e52"
+    },
+    {
+      "file": "urbit-ob.txt",
+      "sha256": "167964c854de95e28d969a9f5f650dc5cadfcdf581e47a28afe52bb0102c5ce7"
+    },
+    {
+      "file": "urbit-sigil-js.txt",
+      "sha256": "167964c854de95e28d969a9f5f650dc5cadfcdf581e47a28afe52bb0102c5ce7"
+    }
+  ],
+  "native_support": [
+    {
+      "local_path": "desk/lib/default-agent.hoon",
+      "bytes": 1307,
+      "sha256": "70a8af06601e8d1b75b261b2ac8b2cb06d5622baa1d1b1f8fec9236ce167d113",
+      "source_url": "https://raw.githubusercontent.com/urbit/urbit/0f94550b941dfe046d9dff4a541330bd084e8cd1/pkg/base-dev/lib/default-agent.hoon",
+      "upstream_revision": "0f94550b941dfe046d9dff4a541330bd084e8cd1",
+      "upstream_path": "pkg/base-dev/lib/default-agent.hoon",
+      "upstream_sha256": "70a8af06601e8d1b75b261b2ac8b2cb06d5622baa1d1b1f8fec9236ce167d113",
+      "match_method": "exact bytes",
+      "exact_bytes": true,
+      "historical_import_revision": "unknown",
+      "license": "MIT",
+      "notice_sha256": "b5d62c0a6f6b17ff490de29606527bf77b6509998ef07048488d659e2b719e52",
+      "notice_path": "licenses/urbit-native.txt"
+    },
+    {
+      "local_path": "desk/lib/docket.hoon",
+      "bytes": 4873,
+      "sha256": "031be1e2e944835a3d11a90f26c6c61f9bbd40123d2dd249ff7b728acbb1d025",
+      "source_url": "https://raw.githubusercontent.com/urbit/urbit/0f94550b941dfe046d9dff4a541330bd084e8cd1/pkg/landscape/lib/docket.hoon",
+      "upstream_revision": "0f94550b941dfe046d9dff4a541330bd084e8cd1",
+      "upstream_path": "pkg/landscape/lib/docket.hoon",
+      "upstream_sha256": "031be1e2e944835a3d11a90f26c6c61f9bbd40123d2dd249ff7b728acbb1d025",
+      "match_method": "exact bytes",
+      "exact_bytes": true,
+      "historical_import_revision": "unknown",
+      "license": "MIT",
+      "notice_sha256": "b5d62c0a6f6b17ff490de29606527bf77b6509998ef07048488d659e2b719e52",
+      "notice_path": "licenses/urbit-native.txt"
+    },
+    {
+      "local_path": "desk/lib/skeleton.hoon",
+      "bytes": 792,
+      "sha256": "c7c654a91c5dc1a535d4a76b019ec175955e52961b1ddff70ad49121208d20f5",
+      "source_url": "https://raw.githubusercontent.com/urbit/urbit/0f94550b941dfe046d9dff4a541330bd084e8cd1/pkg/base-dev/lib/skeleton.hoon",
+      "upstream_revision": "0f94550b941dfe046d9dff4a541330bd084e8cd1",
+      "upstream_path": "pkg/base-dev/lib/skeleton.hoon",
+      "upstream_sha256": "c7c654a91c5dc1a535d4a76b019ec175955e52961b1ddff70ad49121208d20f5",
+      "match_method": "exact bytes",
+      "exact_bytes": true,
+      "historical_import_revision": "unknown",
+      "license": "MIT",
+      "notice_sha256": "b5d62c0a6f6b17ff490de29606527bf77b6509998ef07048488d659e2b719e52",
+      "notice_path": "licenses/urbit-native.txt"
+    },
+    {
+      "local_path": "desk/mar/bill.hoon",
+      "bytes": 715,
+      "sha256": "a0196da4970b8dfdee321a638040a564f95e8000f3b49eccc274ee8de2fae0ff",
+      "source_url": "https://raw.githubusercontent.com/urbit/urbit/0f94550b941dfe046d9dff4a541330bd084e8cd1/pkg/base-dev/mar/bill.hoon",
+      "upstream_revision": "0f94550b941dfe046d9dff4a541330bd084e8cd1",
+      "upstream_path": "pkg/base-dev/mar/bill.hoon",
+      "upstream_sha256": "a0196da4970b8dfdee321a638040a564f95e8000f3b49eccc274ee8de2fae0ff",
+      "match_method": "exact bytes",
+      "exact_bytes": true,
+      "historical_import_revision": "unknown",
+      "license": "MIT",
+      "notice_sha256": "b5d62c0a6f6b17ff490de29606527bf77b6509998ef07048488d659e2b719e52",
+      "notice_path": "licenses/urbit-native.txt"
+    },
+    {
+      "local_path": "desk/mar/docket-0.hoon",
+      "bytes": 436,
+      "sha256": "4b3e47032694e121e73ec341b388b94c43580f2002086b3c006b62d00debd5cc",
+      "source_url": "https://raw.githubusercontent.com/urbit/urbit/0f94550b941dfe046d9dff4a541330bd084e8cd1/pkg/landscape/mar/docket-0.hoon",
+      "upstream_revision": "0f94550b941dfe046d9dff4a541330bd084e8cd1",
+      "upstream_path": "pkg/landscape/mar/docket-0.hoon",
+      "upstream_sha256": "a0e69786863df79ad837211a44216efa49401b98a1800a86c647639025a9d028",
+      "match_method": "only trailing whitespace removed: upstream ++  mime has two trailing spaces; no other difference",
+      "exact_bytes": false,
+      "historical_import_revision": "unknown",
+      "license": "MIT",
+      "notice_sha256": "b5d62c0a6f6b17ff490de29606527bf77b6509998ef07048488d659e2b719e52",
+      "notice_path": "licenses/urbit-native.txt"
+    },
+    {
+      "local_path": "desk/mar/hoon.hoon",
+      "bytes": 9154,
+      "sha256": "a77a0a8e0cd772ae9e7aa8c50d17b783d1969c64f031b6dc1d71f9e63a1cd73e",
+      "source_url": "https://raw.githubusercontent.com/urbit/urbit/9ae55333899fccdf6e50e5f0563425e5eae4c383/pkg/base-dev/mar/hoon.hoon",
+      "upstream_revision": "9ae55333899fccdf6e50e5f0563425e5eae4c383",
+      "upstream_path": "pkg/base-dev/mar/hoon.hoon",
+      "upstream_sha256": "a77a0a8e0cd772ae9e7aa8c50d17b783d1969c64f031b6dc1d71f9e63a1cd73e",
+      "match_method": "exact bytes",
+      "exact_bytes": true,
+      "historical_import_revision": "unknown",
+      "license": "MIT",
+      "notice_sha256": "b5d62c0a6f6b17ff490de29606527bf77b6509998ef07048488d659e2b719e52",
+      "notice_path": "licenses/urbit-native.txt"
+    },
+    {
+      "local_path": "desk/mar/json.hoon",
+      "bytes": 588,
+      "sha256": "1a9b61feb7d40dc94e682ba665c9f8d5d37c458868942d3b9e7b87562e538fc6",
+      "source_url": "https://raw.githubusercontent.com/urbit/urbit/0f94550b941dfe046d9dff4a541330bd084e8cd1/pkg/base-dev/mar/json.hoon",
+      "upstream_revision": "0f94550b941dfe046d9dff4a541330bd084e8cd1",
+      "upstream_path": "pkg/base-dev/mar/json.hoon",
+      "upstream_sha256": "1a9b61feb7d40dc94e682ba665c9f8d5d37c458868942d3b9e7b87562e538fc6",
+      "match_method": "exact bytes",
+      "exact_bytes": true,
+      "historical_import_revision": "unknown",
+      "license": "MIT",
+      "notice_sha256": "b5d62c0a6f6b17ff490de29606527bf77b6509998ef07048488d659e2b719e52",
+      "notice_path": "licenses/urbit-native.txt"
+    },
+    {
+      "local_path": "desk/mar/kelvin.hoon",
+      "bytes": 566,
+      "sha256": "f23c0150f240d040dd24d99bb54e02c4df736e0f4d2bd5654bbc304082c8125c",
+      "source_url": "https://raw.githubusercontent.com/urbit/urbit/0f94550b941dfe046d9dff4a541330bd084e8cd1/pkg/base-dev/mar/kelvin.hoon",
+      "upstream_revision": "0f94550b941dfe046d9dff4a541330bd084e8cd1",
+      "upstream_path": "pkg/base-dev/mar/kelvin.hoon",
+      "upstream_sha256": "f23c0150f240d040dd24d99bb54e02c4df736e0f4d2bd5654bbc304082c8125c",
+      "match_method": "exact bytes",
+      "exact_bytes": true,
+      "historical_import_revision": "unknown",
+      "license": "MIT",
+      "notice_sha256": "b5d62c0a6f6b17ff490de29606527bf77b6509998ef07048488d659e2b719e52",
+      "notice_path": "licenses/urbit-native.txt"
+    },
+    {
+      "local_path": "desk/mar/mime.hoon",
+      "bytes": 565,
+      "sha256": "f1b94f43735fd3a6b86f5cd4619851bc1af9145281f68a07724c4bea870de535",
+      "source_url": "https://raw.githubusercontent.com/urbit/urbit/0f94550b941dfe046d9dff4a541330bd084e8cd1/pkg/base-dev/mar/mime.hoon",
+      "upstream_revision": "0f94550b941dfe046d9dff4a541330bd084e8cd1",
+      "upstream_path": "pkg/base-dev/mar/mime.hoon",
+      "upstream_sha256": "f1b94f43735fd3a6b86f5cd4619851bc1af9145281f68a07724c4bea870de535",
+      "match_method": "exact bytes",
+      "exact_bytes": true,
+      "historical_import_revision": "unknown",
+      "license": "MIT",
+      "notice_sha256": "b5d62c0a6f6b17ff490de29606527bf77b6509998ef07048488d659e2b719e52",
+      "notice_path": "licenses/urbit-native.txt"
+    },
+    {
+      "local_path": "desk/mar/noun.hoon",
+      "bytes": 409,
+      "sha256": "7581328f74894baa376d3a80e370808dca3ad3af96bc0ef6e4ac299984744b89",
+      "source_url": "https://raw.githubusercontent.com/urbit/urbit/0f94550b941dfe046d9dff4a541330bd084e8cd1/pkg/base-dev/mar/noun.hoon",
+      "upstream_revision": "0f94550b941dfe046d9dff4a541330bd084e8cd1",
+      "upstream_path": "pkg/base-dev/mar/noun.hoon",
+      "upstream_sha256": "7581328f74894baa376d3a80e370808dca3ad3af96bc0ef6e4ac299984744b89",
+      "match_method": "exact bytes",
+      "exact_bytes": true,
+      "historical_import_revision": "unknown",
+      "license": "MIT",
+      "notice_sha256": "b5d62c0a6f6b17ff490de29606527bf77b6509998ef07048488d659e2b719e52",
+      "notice_path": "licenses/urbit-native.txt"
+    },
+    {
+      "local_path": "desk/mar/ship.hoon",
+      "bytes": 335,
+      "sha256": "07158d058bd9cd6dfe00059fa4f2329f4cd587173f42ccf274c5c3d5bee768de",
+      "source_url": "https://raw.githubusercontent.com/urbit/urbit/0f94550b941dfe046d9dff4a541330bd084e8cd1/pkg/base-dev/mar/ship.hoon",
+      "upstream_revision": "0f94550b941dfe046d9dff4a541330bd084e8cd1",
+      "upstream_path": "pkg/base-dev/mar/ship.hoon",
+      "upstream_sha256": "07158d058bd9cd6dfe00059fa4f2329f4cd587173f42ccf274c5c3d5bee768de",
+      "match_method": "exact bytes",
+      "exact_bytes": true,
+      "historical_import_revision": "unknown",
+      "license": "MIT",
+      "notice_sha256": "b5d62c0a6f6b17ff490de29606527bf77b6509998ef07048488d659e2b719e52",
+      "notice_path": "licenses/urbit-native.txt"
+    },
+    {
+      "local_path": "desk/mar/txt.hoon",
+      "bytes": 7802,
+      "sha256": "cb76a42e114f3b8f3ac37d09bfe7b1b41bc5c54e6406c0c01fb249af6910bc5d",
+      "source_url": "https://raw.githubusercontent.com/urbit/urbit/0f94550b941dfe046d9dff4a541330bd084e8cd1/pkg/base-dev/mar/txt.hoon",
+      "upstream_revision": "0f94550b941dfe046d9dff4a541330bd084e8cd1",
+      "upstream_path": "pkg/base-dev/mar/txt.hoon",
+      "upstream_sha256": "cb76a42e114f3b8f3ac37d09bfe7b1b41bc5c54e6406c0c01fb249af6910bc5d",
+      "match_method": "exact bytes",
+      "exact_bytes": true,
+      "historical_import_revision": "unknown",
+      "license": "MIT",
+      "notice_sha256": "b5d62c0a6f6b17ff490de29606527bf77b6509998ef07048488d659e2b719e52",
+      "notice_path": "licenses/urbit-native.txt"
+    },
+    {
+      "local_path": "desk/sur/docket.hoon",
+      "bytes": 1427,
+      "sha256": "dd930bf411fa129551bf78496b23a96e19743ec4534f4a08bfa37c92c71fc029",
+      "source_url": "https://raw.githubusercontent.com/urbit/urbit/0f94550b941dfe046d9dff4a541330bd084e8cd1/pkg/landscape/sur/docket.hoon",
+      "upstream_revision": "0f94550b941dfe046d9dff4a541330bd084e8cd1",
+      "upstream_path": "pkg/landscape/sur/docket.hoon",
+      "upstream_sha256": "dd930bf411fa129551bf78496b23a96e19743ec4534f4a08bfa37c92c71fc029",
+      "match_method": "exact bytes",
+      "exact_bytes": true,
+      "historical_import_revision": "unknown",
+      "license": "MIT",
+      "notice_sha256": "b5d62c0a6f6b17ff490de29606527bf77b6509998ef07048488d659e2b719e52",
+      "notice_path": "licenses/urbit-native.txt"
+    }
+  ],
+  "javascript_components": [
+    {
+      "name": "@urbit/sigil-js",
+      "version": "2.2.0",
+      "version_evidence": "prior audit lock/input graph, reverified official package notice",
+      "license": "MIT",
+      "source_url": "https://registry.npmjs.org/@urbit/sigil-js/-/sigil-js-2.2.0.tgz",
+      "package_sha256": "edce8bf66bf6d85119c02f6862e165493b3a6865808835f64add81f14d28d3b4",
+      "notice_sha256": "167964c854de95e28d969a9f5f650dc5cadfcdf581e47a28afe52bb0102c5ce7",
+      "shipped_notice_path": "frontend/public/licenses/urbit-sigil-js.txt",
+      "notice_exact_bytes": true,
+      "source_matches": [
+        {
+          "input_path": "node_modules/@urbit/sigil-js/dist/core.esm.js",
+          "package_member": "package/dist/core.esm.js",
+          "sha256": "24d213b4bedeabe48742548c03ad2fa6751c125a4c1ff3752f129d13261719f7",
+          "match": "exact bytes to retained bundle input; graph carried forward from audit"
+        }
+      ]
+    },
+    {
+      "name": "urbit-ob",
+      "version": "5.0.1",
+      "version_evidence": "prior audit lock/input graph, reverified official package notice",
+      "license": "MIT",
+      "source_url": "https://registry.npmjs.org/urbit-ob/-/urbit-ob-5.0.1.tgz",
+      "package_sha256": "266768608062307775780171817ac6bee7c5b86cc35bb8db005ec5e51dbf21b6",
+      "notice_sha256": "167964c854de95e28d969a9f5f650dc5cadfcdf581e47a28afe52bb0102c5ce7",
+      "shipped_notice_path": "frontend/public/licenses/urbit-ob.txt",
+      "notice_exact_bytes": true,
+      "source_matches": [
+        {
+          "input_path": "node_modules/urbit-ob/src/internal/muk.js",
+          "package_member": "package/src/internal/muk.js",
+          "sha256": "5b0fe5e75668c244e3956d42abad9aa0620324309ea03621e6d72769a8604bed",
+          "match": "exact bytes to retained bundle input; graph carried forward from audit"
+        },
+        {
+          "input_path": "node_modules/urbit-ob/src/internal/ob.js",
+          "package_member": "package/src/internal/ob.js",
+          "sha256": "b669fdefdf5370646e760735e265346174e74baa6c4fa1affeff3a55f9de8cdb",
+          "match": "exact bytes to retained bundle input; graph carried forward from audit"
+        },
+        {
+          "input_path": "node_modules/urbit-ob/src/internal/co.js",
+          "package_member": "package/src/internal/co.js",
+          "sha256": "7a92eca16e2370c956cf78618d4062b8ac8944eebd0f6d47019d7d77deae64e2",
+          "match": "exact bytes to retained bundle input; graph carried forward from audit"
+        },
+        {
+          "input_path": "node_modules/urbit-ob/src/index.js",
+          "package_member": "package/src/index.js",
+          "sha256": "cdd35378ae7ad5ccef995f895dd82f620ee33b27c319c4da5da6e80f5d35620c",
+          "match": "exact bytes to retained bundle input; graph carried forward from audit"
+        }
+      ]
+    },
+    {
+      "name": "bn.js",
+      "version": "4.12.5",
+      "version_evidence": "prior audit lock/input graph, reverified official package notice",
+      "license": "MIT",
+      "source_url": "https://registry.npmjs.org/bn.js/-/bn.js-4.12.5.tgz",
+      "package_sha256": "50c550f01680444f2d5985b78bab8976ea17c3f43963a8fdc39bdbb4489fb5fb",
+      "notice_sha256": "445739f5b5eb63e5aeff5aeb0f35a45080a421615dce0d97f9939aeea498acdd",
+      "shipped_notice_path": "frontend/public/licenses/bn.js.txt",
+      "notice_exact_bytes": true,
+      "source_matches": [
+        {
+          "input_path": "node_modules/bn.js/lib/bn.js",
+          "package_member": "package/lib/bn.js",
+          "sha256": "6c67724e6d6ba2c42e098ffa680148dda95364afd565c2b1f72c966f26bd2cf2",
+          "match": "exact bytes to retained bundle input; graph carried forward from audit"
+        }
+      ]
+    },
+    {
+      "name": "invariant",
+      "version": "2.2.4",
+      "version_evidence": "prior audit lock/input graph, reverified official package notice",
+      "license": "MIT",
+      "source_url": "https://registry.npmjs.org/invariant/-/invariant-2.2.4.tgz",
+      "package_sha256": "68ca08de61805e195cb73d33803b433469bd5c8006166067a4734c9005effa81",
+      "notice_sha256": "f657f99d3fb9647db92628e96007aabb46e5f04f33e49999075aab8e250ca7ce",
+      "shipped_notice_path": "frontend/public/licenses/invariant.txt",
+      "notice_exact_bytes": true,
+      "source_matches": [
+        {
+          "input_path": "node_modules/invariant/browser.js",
+          "package_member": "package/browser.js",
+          "sha256": "f14ea86f330394a3126de5b35da11498a0e3d8c4847415028941012d45b4f70f",
+          "match": "exact bytes to retained bundle input; graph carried forward from audit"
+        }
+      ]
+    },
+    {
+      "name": "lodash.chunk",
+      "version": "4.2.0",
+      "version_evidence": "prior audit lock/input graph, reverified official package notice",
+      "license": "MIT",
+      "source_url": "https://registry.npmjs.org/lodash.chunk/-/lodash.chunk-4.2.0.tgz",
+      "package_sha256": "6aa88f76777f8e7962036c197845c4943e3fe1aaf7c5b7c2d4adc313c9009cf9",
+      "notice_sha256": "ffd8b33b354585f4ce119f19c53728281e48a97b074491eb6bf6d5c5ff305272",
+      "shipped_notice_path": "frontend/public/licenses/lodash.chunk.txt",
+      "notice_exact_bytes": true,
+      "source_matches": [
+        {
+          "input_path": "node_modules/lodash.chunk/index.js",
+          "package_member": "package/index.js",
+          "sha256": "e123b94d40be87a212eb4e0fad4bad224bb3768199f49eda029916770ab39654",
+          "match": "exact bytes to retained bundle input; graph carried forward from audit"
+        }
+      ]
+    },
+    {
+      "name": "lodash.isequal",
+      "version": "4.5.0",
+      "version_evidence": "prior audit lock/input graph, reverified official package notice",
+      "license": "MIT",
+      "source_url": "https://registry.npmjs.org/lodash.isequal/-/lodash.isequal-4.5.0.tgz",
+      "package_sha256": "a3b534a55485caad0c28ce56779eb4faea13d3c23a55691eaedca6a0b9834278",
+      "notice_sha256": "e159c6d48c989185448658f276375bfb2300362ec6d4ae5525a2d49c4bcb947d",
+      "shipped_notice_path": "frontend/public/licenses/lodash.isequal.txt",
+      "notice_exact_bytes": true,
+      "source_matches": [
+        {
+          "input_path": "node_modules/lodash.isequal/index.js",
+          "package_member": "package/index.js",
+          "sha256": "e552928a511748303101cfd03826a777cfa359eade6a4a60f92c923edbf9184c",
+          "match": "exact bytes to retained bundle input; graph carried forward from audit"
+        }
+      ]
+    },
+    {
+      "name": "@urbit/http-api",
+      "version": "2.3.0",
+      "version_evidence": "official npm distribution byte match",
+      "license": "MIT",
+      "source_url": "https://registry.npmjs.org/@urbit/http-api/-/http-api-2.3.0.tgz",
+      "package_sha256": "0bc0b272ebc75ca89e3519776357c11897bb2033b5874fe19f36e38f55b99be1",
+      "notice_sha256": "b5d62c0a6f6b17ff490de29606527bf77b6509998ef07048488d659e2b719e52",
+      "shipped_notice_path": "frontend/public/licenses/urbit-http-api.txt",
+      "notice_exact_bytes": true,
+      "source_matches": [
+        {
+          "package_member": "package/dist/urbit-http-api.min.js",
+          "local_path": "frontend/public/assets/urbit-http-api-2.3.0.min.js",
+          "sha256": "9876912f8afd7141e900f6cf121d9076d7278046b45b12c154e5f2cc20438683",
+          "match": "exact bytes"
+        },
+        {
+          "package_member": "package/dist/urbit-http-api.min.js.map",
+          "local_path": "frontend/public/assets/urbit-http-api.min.js.map",
+          "sha256": "ee6770533757be7b67c173dd5db234be07bac891a929849ed63e677aea15c6b8",
+          "match": "exact bytes"
+        }
+      ],
+      "npm_gitHead": "06fc1897b79c0219295e62172c6b9837593471bb",
+      "upstream_notice_url": "https://raw.githubusercontent.com/urbit/urbit/06fc1897b79c0219295e62172c6b9837593471bb/LICENSE.txt"
+    },
+    {
+      "name": "browser-or-node",
+      "version": "1.3.0",
+      "version_evidence": "official npm package byte match to embedded source-map sourcesContent; build lockfile not recovered",
+      "license": "MIT",
+      "source_url": "https://registry.npmjs.org/browser-or-node/-/browser-or-node-1.3.0.tgz",
+      "package_sha256": "95e186f24886ea0a9ed04e93f5e81abbcd6befb7bd99169a7eae9f46676a734e",
+      "notice_sha256": "24db40be0d44fa26998a36b48321360478c5f2b6fe80b05c620b21a2810c2351",
+      "shipped_notice_path": "frontend/public/licenses/browser-or-node.txt",
+      "notice_exact_bytes": true,
+      "source_matches": [
+        {
+          "source_map_entry": "../node_modules/browser-or-node/lib/index.js",
+          "package_member": "package/lib/index.js",
+          "sha256": "8b89acd60ade107bec5db9f48e22d7255e2f2cc2a7d2429f985a41ab972d8bfb",
+          "match": "exact bytes of sourcesContent"
+        }
+      ]
+    },
+    {
+      "name": "@microsoft/fetch-event-source",
+      "version": "2.0.1",
+      "version_evidence": "official npm package byte match to embedded source-map sourcesContent; build lockfile not recovered",
+      "license": "MIT",
+      "source_url": "https://registry.npmjs.org/@microsoft/fetch-event-source/-/fetch-event-source-2.0.1.tgz",
+      "package_sha256": "86d544f5565bbbd4193d17d0f5a97ee531eb63fd322f1e1063733b47f1352fac",
+      "notice_sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+      "shipped_notice_path": "frontend/public/licenses/fetch-event-source.txt",
+      "notice_exact_bytes": true,
+      "source_matches": [
+        {
+          "source_map_entry": "../node_modules/@microsoft/fetch-event-source/lib/esm/parse.js",
+          "package_member": "package/lib/esm/parse.js",
+          "sha256": "8e136b9d47df94b18490bdd347b3029f0ecffe96bd052dd0263143df8aac5e0b",
+          "match": "exact bytes of sourcesContent"
+        },
+        {
+          "source_map_entry": "../node_modules/@microsoft/fetch-event-source/lib/esm/fetch.js",
+          "package_member": "package/lib/esm/fetch.js",
+          "sha256": "281018bed797cc242747cbdfa2ad1e2ad4a33a183f3b94c54d87e6c596f1b570",
+          "match": "exact bytes of sourcesContent"
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Exact source-content correspondence is not recovery of the historical native import or original npm installation/build event.",
+    "No single coherent original native base is established.",
+    "Contributor/predecessor rights, external code/art inputs, icon provenance and branding/name rights require human review; no legal clearance."
+  ]
+}

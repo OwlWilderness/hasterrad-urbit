@@ -136,8 +136,8 @@
     (seed-wave w(level (min 99 +(level.w)), phase %active, pause 0, tick +(tick.w)))
   ?:  =(0 (lent targets.w))  (complete-wave w)
   =/  before  [x.w y.w]
-  =.  angle.w  (mod (add angle.w (add ?:(left.input 355 0) ?:(right.input 5 0))) 360)
-  =/  v  (vector angle.w ?:(thrust.input 8.192 0))
+  =.  angle.w  (mod (add angle.w (add ?:(left.input 350 0) ?:(right.input 10 0))) 360)
+  =/  v  (vector angle.w ?:(thrust.input 16.384 0))
   =/  pos  (translate x.w y.w vx.v vy.v)
   =.  w  w(tick +(tick.w), x -.pos, y +.pos, vx vx.v, vy vy.v)
   =.  w

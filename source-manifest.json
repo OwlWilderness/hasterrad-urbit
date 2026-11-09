@@ -1,11 +1,11 @@
 {
   "format": 1,
-  "boundary": "v0.0.1 experimental release; accepted runtime/frontend bytes unchanged; player handling deferred to #13",
+  "boundary": "Unreleased issue #13 qualified source; v0.0.1 preserved; publisher commit observed; manual re-glob and consumer handling acceptance pending",
   "descriptor": "fresh-install 0v0 template; never replace a live descriptor",
   "files": [
     {
       "path": "CHANGELOG.md",
-      "sha256": "d0292066aa356c9227dcd1031aef52840743a4844000b41cf6d07a2d6cacb448"
+      "sha256": "8c83ac6df3410f1526a2c68444b52607535c4b89b180a0dc573acef2fa6ee91d"
     },
     {
       "path": "LICENSE",
@@ -13,7 +13,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "3ff290aa26c15f9cd7c97f3a9af592501fd8957072bd00d6d3451cf1128d79d9"
+      "sha256": "b0a25a4304759385a5eb2e5d1b1065c3b54eb3128ceba9fe49484dd4c410e9bc"
     },
     {
       "path": "THIRD-PARTY-NOTICES.md",
@@ -49,7 +49,7 @@
     },
     {
       "path": "desk/lib/hasterrad-core.hoon",
-      "sha256": "f5b64d52115fb69244a50460fa61d54e64c54f0bf468a206950af5868da294c2"
+      "sha256": "79d93e050527f92890246c400e8ddc1e0b626ced2c7efe3de0b70713afed5ef6"
     },
     {
       "path": "desk/lib/hasterrad-enemies.hoon",
@@ -366,6 +366,14 @@
     {
       "path": "tests/native/wave.hoon",
       "sha256": "268dd89f856fe3298059edfa27febd55cc6157f04400fdad17be123a6cd3ead3"
+    },
+    {
+      "path": "tests/native/handling.hoon",
+      "sha256": "c9677f774440ef35b80494a250d2cb97e14b0ecfc58de003d50bde3310218b0f"
+    },
+    {
+      "path": "tools/run_handling_native.py",
+      "sha256": "b2d021aed66f70a04a869fb7fafda3907362c4ee2d4397038af5dca78681960e"
     }
   ]
 }

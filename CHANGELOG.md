@@ -1,5 +1,12 @@
 # Changelog
 
+## Unreleased — Refs #13
+
+- Double native player thrust and turn increments only; preserve cadence, immediate stop, wrapping, fire rules, enemies, levels and save/protocol shape.
+- Offline pure Hoon behavioral RED/GREEN and levels checks pass; portable build and Python/Node checks pass. These are not a new Gall installation or owner handling acceptance.
+- Owner publisher commit/Gall reload observed. The commit also touched Docket and awaits a manual re-glob of the unchanged licensed frontend; latest re-glob and consumer feel acceptance remain unconfirmed.
+- Subsequent source publication does not change VERSION, the frozen v0.0.1 tag or release assets.
+
 ## 0.0.1 — initial experimental release
 
 - Hoon-authoritative movement, collisions, scoring, lives and saved games, with the installing ship as pilot.
